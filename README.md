@@ -13,4 +13,4 @@ Run 'index.html' to start the game. app.py will be used for the server when I ad
 ## Documents
 
 - [User guide](https://docs.google.com/document/d/1UTxs2sZEtipSRlgMWToCoxVr83NhQB4kUpzGl-0quk4/edit?usp=sharing)
-- Todo list: TODO.md
+- [Todo list](TODO.md)
