@@ -349,7 +349,6 @@ class EntityBase {
 					} else if (hidden){
 						continue;
 					} else {
-						console.trace(this.cutscene)
 						if (this.pre_crush() !== false) this.hurt(null, true, true);
 					}
 				} else {
