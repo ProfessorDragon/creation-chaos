@@ -1,0 +1,25 @@
+powerup - g/positive/powerup16
+onoff - g/negative/error7
+hurt - g/negative/negative1
+block_release - g/interactions/interaction16
+kill_small - g/interactions/interaction22
+extra_life - g/fanfares/fanfare2
+key - g/fanfares/fanfare3
+large_coin - g/coins/double1
+key_coin - g/coins/double5
+message - g/pause/pause3_in
+bad_key g/negative/error5
+door - g/negative/error9
+door2 - movement/doors/dooropen1
+unlock - movement/doors/dooropen3
+bounce - movement/jump/jump3
+no_key - weapons/noammo/noammo3
+bump - bfxr
+coin - bfxr
+jump - bfxr
+explosion - bfxr
+kill - bfxr
+powerup_small - bfxr
+fireball_shoot - bfxr
+kick - bfxr
+thump - bfxr
