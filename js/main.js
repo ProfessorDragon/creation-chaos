@@ -1168,7 +1168,7 @@ function click_reset_preferences_button(){
 	prefs = {
 		topbarshown: true, bottombarshown: true, tapjump: true, prevententitystack: true,
 		showhitboxes: false, framebyframe: false, lockcamera: false,
-		area: 0, character: 0, fpslimit: 60, zoom: 1, sfxvolume: 80, musicvolume: 80
+		area: 0, character: 0, fpslimit: 60, showfpsdrop: false, zoom: 1, sfxvolume: 80, musicvolume: 80
 	};
 }
 
@@ -1550,7 +1550,9 @@ function update_fps(now, x, y){
 				if (fpsdrop[2] > 1) text += " x"+fpsdrop[2];
 			}
 			ctx.fillText(text, x, y+20);
-			if (Math.round(prev/2)*2 < r) fpsdrop = [prev, frame, (fpsdrop != null)?(fpsdrop[2]+1):1];
+			if (prefs.showfpsdrop && Math.round(prev/2)*2 < r){
+				fpsdrop = [prev, frame, (fpsdrop != null)?(fpsdrop[2]+1):1];
+			}
 			if (fpsdrop != null && frame-fpsdrop[1] > 30) fpsdrop = null;
 		}
 	}
@@ -1697,7 +1699,7 @@ function draw_ui(now){
 		}
 		draw_entity_menu(ent, x, y, w, h, menuclass, "Settings");
 	} else if (menu.id == "prefs"){ // preferences menu
-		w = 380, h = 277;
+		w = 400, h = 310;
 		x = maxw-w-2, y = maxh-h-2;
 		if (prefs.bottombarshown) y -= uidata.bottom.h;
 		draw_entity_menu(null, x, y, w, h, MenuPresets.preferences, "Preferences");

@@ -3584,6 +3584,9 @@ class MenuPresets {
 		m = EntityMenu.text(x, y, "SFX volume");
 		EntityMenu.slider(m.r, y, 0, 100, prefs, "sfxvolume");
 		y += m.h;
+		m = EntityMenu.text(x, y, "FPS Limit");
+		EntityMenu.counter(m.r, y, 48, 72, prefs, "fpslimit", 12);
+		y += m.h;
 		m = EntityMenu.text(x, y, "Press up to jump");
 		EntityMenu.toggle_icon(m.r, y, prefs, "tapjump");
 		y += m.h;
